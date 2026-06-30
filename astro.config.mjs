@@ -7,7 +7,7 @@ import favicons from "astro-favicons";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.CANONICAL_URL,
+  site: "https://honesan.github.io",
   output: "static",
 
   build: {
@@ -53,7 +53,7 @@ export default defineConfig({
         resources: ["'self'", "'unsafe-hashes'"],
         hashes: [
           "sha256-WUDfWmQP7MHmJVPG87eP2N5ZE7RjDV9+6B/uKHMlSAE=",
-          "sha256-P+wlFJoxzaX+ilJ24YqyBBK/sG4spb5yZWdYMQspG1I=",
+          "sha256-P+wlFJoxzaX+ilJ24YqyBBK/sG4spb5yZWdMQQspG1I=",
           "sha256-UI6m4fBliGqfCKOZ9qe8Jk7vapco4kY9asvtzmDNHtI=",
           "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
           "sha256-kdaXPEOwTw3zyiuCzGv1vpohcW9SqOWq8k6gy2OWgtI=",
