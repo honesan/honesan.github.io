@@ -12,10 +12,11 @@ import Footer from "@components/Footer.astro";
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 const {
-    companyName = SITE.COMPANY_NAME,
+    companyName = "Honesan",
     legalName = SITE.LEGAL_NAME,
-    title = `${SITE.COMPANY_NAME}: ${SITE.TITLE}`,
-    description = SITE.DESCRIPTION,
+    title = "Honesan",
+    description =
+        "Honesan creates thoughtful spaces with modern design and personalized interiors.",
     canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
     ogImage = SITE.OG_IMAGE,
     twitterHandle = SITE.TWITTER?.CREATOR,
@@ -49,97 +50,88 @@ const schemaData = {
 ---
 
 <!doctype html>
-<html lang=`${SITE.LOCALE ?? "en"}`>
+<html lang={SITE.LOCALE ?? "en"}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
+
+        <title>{title}</title>
+
+        <meta
+            name="description"
+            content={description}
+        />
+
+        <meta name="author" content="Honesan" />
+
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="canonical" href={canonicalURL} />
-        <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+
+        <link
+            rel="canonical"
+            href={canonicalURL}
+        />
+
+        <link
+            rel="preconnect"
+            href="https://res.cloudinary.com"
+            crossorigin
+        />
+
         <link
             rel="preload"
             as="image"
             href="/hero-video-poster.webp"
             fetchpriority="high"
         />
-        <!-- Preload fonts -->
+
         <Font cssVariable="--font-dm-sans" />
 
-        <meta name="generator" content={Astro.generator} />
-
-        <ClientRouter />
-
-        <!-- General Meta Tags -->
-        <title>{title}</title>
-        <meta name="title" content={title} />
-        <meta name="description" content={description} />
-        <meta name="author" content={legalName} />
-        <link rel="sitemap" href="/sitemap-index.xml" />
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:url" content={canonicalURL} />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={socialImageURL} />
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content={SITE.TWITTER?.CARD} />
-        <meta property="twitter:url" content={canonicalURL} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={socialImageURL} />
-        {
-            twitterHandle && (
-                <meta property="twitter:creator" content={twitterHandle} />
-            )
-        }
+        <meta
+            property="og:description"
+            content={description}
+        />
 
-        <!-- Google JSON-LD Structured data -->
+        <meta
+            property="og:image"
+            content={socialImageURL}
+        />
+
+        <meta
+            property="og:type"
+            content="website"
+        />
+
+        {twitterHandle && (
+            <meta
+                name="twitter:creator"
+                content={twitterHandle}
+            />
+        )}
+
+        {googleSiteVerification && (
+            <meta
+                name="google-site-verification"
+                content={googleSiteVerification}
+            />
+        )}
+
         <script
             type="application/ld+json"
             set:html={JSON.stringify(schemaData)}
         />
 
-        {
-            // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-            // include google-site-verification tag in the heading
-            // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
-            googleSiteVerification && (
-                <meta
-                    name="google-site-verification"
-                    content={googleSiteVerification}
-                />
-            )
-        }
+        <ClientRouter />
     </head>
-    <body>
-        <a href="#main" class="skip-link">Skip to content</a>
 
+    <body>
         <Header />
-        <main id="main" tabindex="-1">
+
+        <main>
             <slot />
         </main>
+
         <Footer />
     </body>
 </html>
-
-<style>
-    .skip-link {
-        position: absolute;
-        top: var(--px-10);
-        left: var(--px-8);
-        transform: translateY(-200%);
-        padding: var(--px-12) var(--px-16);
-        border-radius: var(--px-6);
-        color: white;
-        background: #000;
-        z-index: 1001;
-        opacity: 0;
-        transition: opacity var(--transition-short);
-    }
-
-    .skip-link:focus-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-</style>
