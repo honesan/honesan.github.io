@@ -6,8 +6,8 @@
         aria-label="Main navigation"
     >
         <div class="logo-container">
-            <a href="/" class="logo" aria-label="One Space Away home">
-                One Space Away
+            <a href="/" class="logo" aria-label="Honesan home">
+                honesan
             </a>
         </div>
 
@@ -17,10 +17,7 @@
                     <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#how-it-works" class="nav-link">How it Works</a>
+                    <a href="#portfolio" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
@@ -33,13 +30,13 @@
 
             <a href="#contact" class="nav-link btns--secondary mobile-cta">
                 <span class="btn--secondary btn--secondary-unhovered"
-                    >Let's work together</span
+                    >Let’s Collaborate</span
                 >
                 <span
                     class="btn--secondary btn--secondary-hovered"
                     aria-hidden="true"
                 >
-                    Let's work together
+                    Let’s Collaborate
                 </span>
             </a>
         </div>
@@ -47,13 +44,13 @@
         <!-- Desktop CTA -->
         <a href="#contact" class="btns--secondary desktop-cta">
             <span class="btn--secondary btn--secondary-unhovered"
-                >Let's work together</span
+                >Let’s Collaborate</span
             >
             <span
                 class="btn--secondary btn--secondary-hovered"
                 aria-hidden="true"
             >
-                Let's work together
+                Let’s Collaborate
             </span>
         </a>
 
@@ -314,7 +311,6 @@
             }
         };
 
-        // Event delegation for nav links
         navContent.addEventListener("click", (e) => {
             const target = e.target as HTMLElement;
             if (target.classList.contains("nav-link")) {
@@ -340,6 +336,7 @@
     document.addEventListener("astro:after-swap", () => {
         if (headerCleanup) headerCleanup();
         if (menuCleanup) menuCleanup();
+
         headerCleanup = observeHeader();
         menuCleanup = initMobileMenu();
     });
