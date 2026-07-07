@@ -6,163 +6,713 @@
             ABOUT ME
         </span>
 
-
         <h2 class="section-title">
             About Me
         </h2>
 
+        <div class="about-grid">
 
-        <div class="about-content">
+            <!-- Introduction -->
 
+            <button
+                class="about-card"
+                type="button"
+                data-modal="introModal"
+            >
 
-            <div class="about-block">
+                <svg
+                    class="about-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle cx="12" cy="8" r="4"></circle>
+
+                    <path d="M5 20c1.5-4 12.5-4 14 0"></path>
+
+                </svg>
 
                 <h3>
                     Introduction
                 </h3>
 
                 <p>
-                    My name is Ian Park. I was born on June 22, 2016.
-                    I enjoy creating things, learning new skills,
-                    and exploring technology.
+                    Learn more about me.
                 </p>
 
-            </div>
+            </button>
 
 
 
-            <div class="about-block">
+            <!-- My Projects -->
 
-                <h3>
-                    Games & Interests
-                </h3>
+            <button
+                class="about-card"
+                type="button"
+                data-modal="projectsModal"
+            >
 
-                <p>
-                    I enjoy playing Minecraft Java. Even though I am
-                    still a beginner, I like exploring, building,
-                    and learning new things in the game.
-                </p>
+                <svg
+                    class="about-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
 
-                <p>
-                    I also play Roblox Rivals and have reached level 100.
-                    I enjoy playing Bloons TD 6 as well.
-                </p>
+                    <path d="M3 7h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
 
-            </div>
-
-
-
-            <div class="about-block">
-
-                <h3>
-                    Coding & Creating
-                </h3>
-
-                <p>
-                    I enjoy vibe coding and Python.
-                    I like creating websites, experimenting with ideas,
-                    and improving my coding skills.
-                </p>
-
-            </div>
-
-
-
-            <div class="about-block">
-
-                <h3>
-                    Sports & Food
-                </h3>
-
-                <p>
-                    I enjoy playing sports such as soccer and basketball.
-                    I also like Korean food and non-spicy foods.
-                </p>
-
-            </div>
-
-
-
-            <div class="about-block">
+                </svg>
 
                 <h3>
                     My Projects
                 </h3>
 
                 <p>
-                    I have a YouTube channel called Ianbox.
-                    I enjoy making videos and sharing my creativity
-                    through content.
+                    YouTube and personal projects.
+                </p>
+
+            </button>
+
+
+
+            <!-- Games -->
+
+            <button
+                class="about-card"
+                type="button"
+                data-modal="gamesModal"
+            >
+
+                <svg
+                    class="about-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <rect
+                        x="2"
+                        y="7"
+                        width="20"
+                        height="10"
+                        rx="4"
+                    ></rect>
+
+                    <path d="M7 12h4"></path>
+
+                    <path d="M9 10v4"></path>
+
+                    <circle
+                        cx="17"
+                        cy="10.5"
+                        r="1"
+                    ></circle>
+
+                    <circle
+                        cx="19"
+                        cy="13.5"
+                        r="1"
+                    ></circle>
+
+                </svg>
+
+                <h3>
+                    Games
+                </h3>
+
+                <p>
+                    Minecraft, Roblox and more.
+                </p>
+
+            </button>
+
+
+
+            <!-- Sports -->
+
+            <button
+                class="about-card"
+                type="button"
+                data-modal="sportsModal"
+            >
+
+                <svg
+                    class="about-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="9"
+                    ></circle>
+
+                    <path d="M12 3v18"></path>
+
+                    <path d="M3 12h18"></path>
+
+                </svg>
+
+                <h3>
+                    Sports & Food
+                </h3>
+
+                <p>
+                    What I enjoy outside coding.
+                </p>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- INTRODUCTION MODAL -->
+
+        <dialog
+            id="introModal"
+            class="about-modal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-modal"
+                    type="button"
+                >
+                    ×
+                </button>
+
+                <h3>
+                    Introduction
+                </h3>
+
+                <p>
+                    My name is Ian Park.
                 </p>
 
                 <p>
-                    I like building projects, experimenting with ideas,
-                    and improving my skills over time.
+                    I was born on June 22, 2016.
+                </p>
+
+                <p>
+                    I enjoy creating things,
+                    learning new skills,
+                    and exploring technology.
                 </p>
 
             </div>
 
+        </dialog>
+                <!-- MY PROJECTS MODAL -->
 
-        </div>
+        <dialog
+            id="projectsModal"
+            class="about-modal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-modal"
+                    type="button"
+                >
+                    ×
+                </button>
+
+                <h3>
+                    My Projects
+                </h3>
+
+                <p>
+                    I have a YouTube channel called
+                    <strong>Ianbox</strong>.
+                </p>
+
+                <p>
+                    I enjoy creating videos and
+                    sharing my projects and ideas.
+                </p>
+
+                <p>
+                    My Roblox username is
+                    <strong>kovi106Doit</strong>.
+                </p>
+
+            </div>
+
+        </dialog>
+
+
+
+        <!-- GAMES MODAL -->
+
+        <dialog
+            id="gamesModal"
+            class="about-modal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-modal"
+                    type="button"
+                >
+                    ×
+                </button>
+
+                <h3>
+                    Games & Interests
+                </h3>
+
+                <p>
+                    I enjoy playing Minecraft Java.
+                    Even though I am still a beginner,
+                    I like exploring, building,
+                    and learning new things.
+                </p>
+
+                <p>
+                    I also enjoy playing Roblox
+                    Rivals and have reached
+                    level 100.
+                </p>
+
+                <p>
+                    Another game I enjoy is
+                    Bloons TD 6.
+                </p>
+
+            </div>
+
+        </dialog>
+
+
+
+        <!-- SPORTS MODAL -->
+
+        <dialog
+            id="sportsModal"
+            class="about-modal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-modal"
+                    type="button"
+                >
+                    ×
+                </button>
+
+                <h3>
+                    Sports & Food
+                </h3>
+
+                <p>
+                    I enjoy playing soccer
+                    and basketball.
+                </p>
+
+                <p>
+                    I also enjoy Korean food
+                    and other non-spicy foods.
+                </p>
+
+            </div>
+
+        </dialog>
 
     </div>
 
 </section>
 
-
 <style>
 
-.about-content {
+.about-grid{
 
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:16px;
+
+    margin-top:32px;
 
     align-items:start;
 
 }
 
 
-.about-block {
 
-    padding:28px;
+.about-card{
 
-    border-radius:20px;
+    display:flex;
 
-    background:
-    rgba(0,0,0,.05);
+    flex-direction:column;
 
-    height:max-content;
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:18px 14px;
+
+    min-height:160px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:rgba(0,0,0,.05);
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(0,0,0,.08);
+
+    box-shadow:
+        0 16px 30px rgba(0,0,0,.08);
+
+}
+.about-icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:block;
+
+    margin:0 auto 14px;
+
+    flex-shrink:0;
 
 }
 
 
-.about-block h3 {
 
-    margin-bottom:12px;
+.about-card h3{
 
-    font-size:1.25rem;
+    margin:0 0 8px;
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+    text-align:center;
 
 }
 
 
-.about-block p {
+
+.about-card p{
+
+    margin:0;
+
+    line-height:1.5;
+
+    font-size:.9rem;
+
+    opacity:.7;
+
+    text-align:center;
+
+}
+
+
+
+.about-modal{
+
+    border:none;
+
+    border-radius:22px;
+
+    padding:0;
+
+    width:min(520px,90vw);
+
+    max-width:520px;
+
+    margin:auto;
+
+    position:fixed;
+
+    inset:0;
+
+    max-height:80vh;
+
+    overflow:auto;
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.25);
+
+}
+
+
+
+.about-modal::backdrop{
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(6px);
+
+}
+
+
+
+.modal-content{
+
+    position:relative;
+
+    padding:30px;
+
+    text-align:center;
+
+    cursor:default;
+
+}
+
+
+
+.modal-content h3{
+
+    margin-bottom:18px;
+
+    font-size:1.8rem;
+
+}
+
+
+
+.modal-content p{
+
+    margin-bottom:14px;
 
     line-height:1.7;
 
-    opacity:.8;
+}
+
+
+
+.modal-content p:last-child{
+
+    margin-bottom:0;
 
 }
 
 
-@media(max-width:700px){
 
-    .about-content {
+.close-modal{
 
-        grid-template-columns:1fr;
+    position:absolute;
+
+    top:14px;
+
+    right:14px;
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:20px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+}
+
+
+
+.close-modal:hover{
+
+    transform:scale(1.08);
+
+    background:#333;
+
+}
+@media (max-width: 1000px) {
+
+    .about-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 16px;
+
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+    }
+
+    .about-card {
+
+        min-height: 140px;
+
+        padding: 18px;
+
+    }
+
+    .about-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+    .modal-content {
+
+        padding: 24px;
+
+    }
+
+    .modal-content h3 {
+
+        font-size: 1.5rem;
 
     }
 
 }
 
 </style>
+
+<script>
+
+function initAboutCards() {
+
+    const cards = document.querySelectorAll(".about-card");
+    const dialogs = document.querySelectorAll(".about-modal");
+    const closeButtons = document.querySelectorAll(".close-modal");
+
+    cards.forEach((card) => {
+
+        card.addEventListener("click", () => {
+
+            const modalId = card.getAttribute("data-modal");
+
+            if (!modalId) return;
+
+            const dialog = document.getElementById(modalId);
+
+            if (dialog instanceof HTMLDialogElement) {
+
+                dialog.showModal();
+
+            }
+
+        });
+
+    });
+
+    closeButtons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            const dialog = button.closest("dialog");
+
+            if (dialog instanceof HTMLDialogElement) {
+
+                dialog.close();
+
+            }
+
+        });
+
+    });
+        dialogs.forEach((dialog) => {
+
+        dialog.addEventListener("click", (event) => {
+
+            const rect = dialog.getBoundingClientRect();
+
+            const inside =
+                event.clientX >= rect.left &&
+                event.clientX <= rect.right &&
+                event.clientY >= rect.top &&
+                event.clientY <= rect.bottom;
+
+            if (!inside) {
+
+                dialog.close();
+
+            }
+
+        });
+
+        dialog.addEventListener("cancel", (event) => {
+
+            event.preventDefault();
+
+            dialog.close();
+
+        });
+
+    });
+
+}
+
+initAboutCards();
+
+document.addEventListener("astro:after-swap", () => {
+
+    initAboutCards();
+
+});
+
+</script>
